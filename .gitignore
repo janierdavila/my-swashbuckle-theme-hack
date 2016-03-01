@@ -90,8 +90,4 @@ Thumbs.db
 # Folder config file
 Desktop.ini
 
-#ignore Ghost docs
-StarCraftClient.sln.GhostDoc.xml
-
-#ignore telerik back up
-StarCraftProfile_Backup_2014.11.15_02.12.04
+.vs
