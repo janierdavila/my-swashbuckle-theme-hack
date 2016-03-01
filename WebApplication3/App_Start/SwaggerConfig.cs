@@ -62,12 +62,12 @@ namespace WebApplication3
                     // "Logical Name" is passed to the method as shown below.
                     //
                     c.InjectStylesheet(thisAssembly, "WebApplication3.docs.custom.css");
-
+                    
                     // Use the "InjectJavaScript" option to invoke one or more custom JavaScripts after the swagger-ui
                     // has loaded. The file must be included in your project as an "Embedded Resource", and then the resource's
                     // "Logical Name" is passed to the method as shown above.
                     //
-                    //c.InjectJavaScript(thisAssembly, "Swashbuckle.Dummy.SwaggerExtensions.testScript1.js");
+                    //c.InjectJavaScript(thisAssembly, "WebApplication3.docs.bootstrap.js.bootstrap.min.js");
 
                     // The swagger-ui renders boolean data types as a dropdown. By default, it provides "true" and "false"
                     // strings as the possible choices. You can use this option to change these to something else,
@@ -90,6 +90,7 @@ namespace WebApplication3
                     //
                     c.CustomAsset("index", thisAssembly, "WebApplication3.docs.index.html");
                     c.CustomAsset("starting", thisAssembly, "WebApplication3.docs.starting.html");
+                    //c.CustomAsset("bootstrap", thisAssembly, "WebApplication3.docs.bootstrap-index.html");
 
                     // If your API has multiple versions and you've applied the MultipleApiVersions setting
                     // as described above, you can also enable a select box in the swagger-ui, that displays
