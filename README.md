@@ -2,4 +2,4 @@
 Hacking a Swashbuckle theme. Personal use only.
 
 ## Purpose
-For now, only doing this so I can share this project across all my PCs. Don't this to go anywhere else :)
+For now, only doing this so I can share this project across all my PCs. I am not expecting this project to go anywhere else though:)
