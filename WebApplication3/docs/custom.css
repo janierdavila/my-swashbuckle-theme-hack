@@ -774,7 +774,8 @@ footer.mini-footer {
         }
 
 .input-wrapper {
-    margin: 20px 0;
+    margin: 5px 0 35px 0;
+    text-align: center;
 }
 
     .input-wrapper .form-block {
@@ -783,7 +784,17 @@ footer.mini-footer {
 
         .input-wrapper .form-block input {
             width: 600px !important;
+            height: 44px;
+            border: 1px solid #aaa;
+            box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+            border-radius: 2px;
         }
+
+            .input-wrapper .form-block input:focus {
+                background: #fff;
+                border: 1px solid #555;
+                box-shadow: 0 0 3px #aaa;
+            }
 
         .input-wrapper .form-block label {
             padding: 0 5px;

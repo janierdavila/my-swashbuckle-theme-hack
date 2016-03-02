@@ -60,7 +60,7 @@ namespace WebApplication3
             var node = navigator.SelectSingleNode($"/doc/members/member[@name='{id}']");
 
             var summaryTag = node?.SelectSingleNode("summary");
-            return summaryTag == null ? string.Empty : summaryTag.InnerXml;
+            return summaryTag?.InnerXml.Trim() ?? string.Empty;
         }
     }
 }
