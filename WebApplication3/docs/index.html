@@ -67,10 +67,10 @@
                         });
                     }
                     $('pre code').each(function (i, e) {
-                        hljs.highlightBlock(e)
+                        hljs.highlightBlock(e);
                     });
 
-                    //addApiKeyAuthorization();
+                    addTokenAuthorization();
 
                     window.swaggerApi = swaggerApi;
                     _.each(swashbuckleConfig.customScripts, function (script) {
@@ -87,16 +87,16 @@
             if (window.swashbuckleConfig.validatorUrl !== '')
                 window.swaggerUi.options.validatorUrl = window.swashbuckleConfig.validatorUrl;
 
-            //function addApiKeyAuthorization() {
-            //    var key = encodeURIComponent($('#input_apiKey')[0].value);
-            //    if (key && key.trim() != "") {
-            //        var apiKeyAuth = new SwaggerClient.ApiKeyAuthorization("api_key", key, "query");
-            //        window.swaggerUi.api.clientAuthorizations.add("api_key", apiKeyAuth);
-            //        log("added key " + key);
-            //    }
-            //}
+            function addTokenAuthorization() {
+                var key = "IAS-TOKEN " + $('#token')[0].value;
+                if (key && key.trim() != "") {
+                    var apiKeyAuth = new SwaggerClient.ApiKeyAuthorization("Authorization", key, "header");
+                    window.swaggerUi.api.clientAuthorizations.add("token", apiKeyAuth);
+                    log("added token " + key);
+                }
+            }
 
-            //$('#input_apiKey').change(addApiKeyAuthorization);
+            $('#token').change(addTokenAuthorization);
 
             // if you have an apiKey you would like to pre-populate on the page for demonstration purposes...
             /*
@@ -136,14 +136,17 @@
     <div class="main">
         <div class="wrapper white-box">
             <div class="swagger-ui-wrap">
-                <div id='api_selector'>
-                    <div class='input'>
-                        <label>Swagger doc</label><input placeholder="http://example.com/api" id="input_baseUrl" name="baseUrl" type="text" />
+                <div class="input-wrapper">
+                    <div class="form-block">
+                        <label>Swagger</label>
+                        <input placeholder="http://example.com/api" name="baseUrl" type="text" />
+                    </div>
+                    <div class="form-block">
+                        <label>Token</label>
+                        <input style="margin-left: 17px" placeholder="Token" id="token" name="apiKey" type="text" />
                     </div>
                 </div>
-                <div class='input wrapper'>
-                    <label>Token</label><input placeholder="Token" id="input_apiKey" name="apiKey" type="text" />
-                </div>
+
 
                 <div id="swagger-ui-container" class="swagger-ui-wrap">
 

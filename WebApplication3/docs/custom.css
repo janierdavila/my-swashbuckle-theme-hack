@@ -13,11 +13,11 @@ h1 {
 
 h2 {
     font-size: 40px;
-    line-height: 48px;
+    /*line-height: 48px;*/
     font-family: "proxima-nova",sans-serif;
     font-weight: 500;
     color: #3e3e3e;
-    margin-bottom: 20px;
+    /*/margin-bottom: 20px;*/
 }
 
 h3 {
@@ -67,7 +67,7 @@ p {
 
 nav.global {
     background: #333333;
-    height: 85px;
+    height: 65px;
     border-top: 5px solid #444;
     position: fixed;
     top: 0;
@@ -149,7 +149,7 @@ nav.global {
                 nav.global > .wrapper > ul > li.home a {
                     margin-left: 0;
                     padding: 15px 10px 0;
-                    height: 85px;
+                    height: 65px;
                 }
 
                 nav.global > .wrapper > ul > li.home img {
@@ -533,11 +533,12 @@ p {
 }
 
 body {
-    padding-top: 85px;
+    padding-top: 65px;
 }
 
- p.brand {
-  color:white; font-size:30px;
+p.brand {
+    color: white;
+    font-size: 30px;
 }
 
 .wrapper {
@@ -561,7 +562,7 @@ body {
         overflow: visible;
     }
 
-    footer.mini-footer {
+footer.mini-footer {
     font-size: 14px;
     line-height: 19px;
     font-family: "proxima-nova", sans-serif;
@@ -770,4 +771,20 @@ body {
             *display: inline;
             color: rgba(255,255,255,0.7);
             margin: 0 10px 0 0;
+        }
+
+.input-wrapper {
+    margin: 20px 0;
+}
+
+    .input-wrapper .form-block {
+        margin: 15px 5px;
+    }
+
+        .input-wrapper .form-block input {
+            width: 600px !important;
+        }
+
+        .input-wrapper .form-block label {
+            padding: 0 5px;
         }

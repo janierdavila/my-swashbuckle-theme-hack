@@ -24,5 +24,16 @@ namespace WebApplication3.Controllers
             var a = new string[] { "janier", "davila"};
             return Ok(a);
         }
+
+        /// <summary>
+        /// Post the values.
+        /// </summary>
+        /// <remarks>Every value given as an array of strings</remarks>
+        [ResponseType(typeof(List<string>))]
+        public IHttpActionResult PostValues([FromBody] List<int> ids)
+        {
+            var a = new string[] { "janier", "davila" };
+            return Ok(a);
+        }
     }
 }
