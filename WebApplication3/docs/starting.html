@@ -23,7 +23,7 @@
     <script src='lib/marked-js' type='text/javascript'></script>
     <script src='lib/swagger-oauth-js' type='text/javascript'></script>
 
-   
+
 </head>
 
 <body class="swagger-section">
@@ -49,8 +49,39 @@
                 <div class="info">
                     <div class="info_title">Getting Started with My API</div>
                     <div class="info_description">
-                        <p>Let's talk about authorization</p>
+                        <p>
+                            My API is an HTTP service exposing REST resources over standard HTTP methods.
+                            This getting started guide will give you an introduction of what the API supports.
+                        </p>
                     </div>
+                    <h2>A Word About Swagger</h2>
+                    <p>
+                        My API exposes a Swagger definition file that you can use to speed up integration.
+                        There are lots of tools available, most free, that would allow you to do things like generating clients libraries, test suites, etc.
+                        For example, the popular Chrome extension, Postman, allows you to import a Swagger definition file which generates sample requests against all available resources.
+                        Our Swagger endpoint is listed in our <a href="/docs/index">API Docs</a>.
+                        To learn more about Swagger, visit: <a href="http://swagger.io/">http://swagger.io</a>
+                    </p>
+                    <h2>Authentication and Authorization</h2>
+                    <p>
+                        My API requires clients to authenticate against our Single Sign On (SSO) endpoint.
+                        This endpoint requires clients to have valid credentials and a valid client certificate.
+                        Our SSO solution uses SAML protocol to exchange claims. A private external document is available with more details
+                        about the SAML exchange required to acquire a valid TOKEN. Our SSO endoint is available at <a href="https://sso.qpay123.biz/Dap/SignIn">https://sso.qpay123.biz/Dap/SignIn</a> (https://sso.qpay123.com/Dap/SignIn in production).
+                        Besides issuing a Token, a valid SAML exchange would also provide valid user permissions that clients can use for their authorization needs.
+                    </p>
+                    <h2>The Token</h2>
+                    <p>
+                        The SAML protocol lists the Token as a NameID element in the SAML response. The SAML response also contains the Token expiration timestamp.
+                        Once you have a valid Token, you can start consuming My API by passing it along with the standard Authorization header, using IAS-TOKEN as the scheme like this:
+                    </p>
+                    <pre>Authorization: IAS-TOKEN Hjhiuahskd76876hUIYIUHkjnkuyasldniukulykjnuylijlkhlsdsdd+</pre>
+                    <h2>Our API Documentation</h2>
+                    <p>
+                        My API is documented in more details in our <a href="/docs/index">API Docs</a>. You can also test our resources by entering a valid token and the required parameters if any.
+                        Every resource also documents the type of errors you can expect to receive as well as the meaning of every parameter.
+                        We hope that this style would be very productive to all clients as it has been productive for us. Get in touch with us if you encounter any issues.
+                    </p>
                 </div>
             </div>
         </div>
